@@ -10,7 +10,7 @@
    <center>
       <BorderPane prefWidth="400.0" BorderPane.alignment="CENTER">
          <bottom>
-            <Button mnemonicParsing="false" text="OK" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" text="Botton1" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </BorderPane.margin>

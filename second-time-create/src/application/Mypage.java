@@ -17,11 +17,11 @@ public class Mypage {
     @FXML
     private TextField textField1;
 
+
     @FXML
     void initialize() {
         assert textField1 != null : "fx:id=\"textField1\" was not injected: check your FXML file 'Mypage.fxml'.";
 
     }
 }
-
 
