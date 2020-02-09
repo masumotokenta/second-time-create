@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TabPane fx:id="Tab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1300.0" prefWidth="1500.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPage">
+  <tabs>
+    <Tab fx:id="TabHome" text="Home">
+         <content>
+            <AnchorPane prefHeight="300.0" prefWidth="200.0">
+               <children>
+                  <BarChart fx:id="BarChart" layoutX="778.0" layoutY="517.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                <AnchorPane layoutX="6.0" layoutY="317.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="BWork" layoutX="67.0" layoutY="81.0" mnemonicParsing="false" onAction="#onWork" text="Work" />
+                        <Button fx:id="BFinish" layoutX="403.0" layoutY="81.0" mnemonicParsing="false" onAction="#onFinish" text="Finish" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="ListView" layoutX="14.0" layoutY="538.0" prefHeight="200.0" prefWidth="225.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Work" />
+                      <TableColumn prefWidth="75.0" text="Finish" />
+                        <TableColumn prefWidth="75.0" text="Time" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+    <Tab fx:id="TabChat" text="Chat">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>
