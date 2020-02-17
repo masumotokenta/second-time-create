@@ -31,7 +31,7 @@ public class SampleController {
 	window.hide();
 
 	try {
-		Parent parent = FXMLLoader.load(getClass().getResource("Mypage.fxml"));
+		Parent parent = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();
 		stage.setScene(scene);
