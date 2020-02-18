@@ -59,6 +59,18 @@ public class SampleController {
 	}catch(IOException e) {
 		e.printStackTrace();
 	  }
+	 }else {Scene s = ((Node)event.getSource()).getScene();
+		Window window = s.getWindow();
+		try {
+			Parent parent = FXMLLoader.load(getClass().getResource("Miss.fxml"));
+			Scene scene = new Scene(parent);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.setTitle("Mypage");
+			stage.show();
+		}catch(IOException e) {
+			e.printStackTrace();
+		  }
 	 }
 	}
 		
