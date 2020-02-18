@@ -19,7 +19,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <TextField promptText="ID ">
+            <TextField fx:id="ID" promptText="ID ">
                <VBox.margin>
                   <Insets left="100.0" right="100.0" top="50.0" />
                </VBox.margin>
@@ -29,8 +29,8 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="Butten" mnemonicParsing="false" onAction="#ButtenOnAction1" text="Button" />
-            <PasswordField promptText="PASS">
+            <Button mnemonicParsing="false" onAction="#ButtenOnAction1" text="Button" />
+            <PasswordField fx:id="PASS" promptText="PASS">
                <VBox.margin>
                   <Insets left="100.0" right="100.0" top="50.0" />
                </VBox.margin>
