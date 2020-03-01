@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="92.0" prefWidth="287.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <center>
+      <Pane prefHeight="92.0" prefWidth="277.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="46.0" layoutY="38.0" prefHeight="17.0" prefWidth="232.0" text="IDまたはPASSが間違っています。" textAlignment="CENTER" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
