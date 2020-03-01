@@ -3,6 +3,7 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
@@ -11,6 +12,9 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+
 
 
 public class MainPage {
@@ -22,13 +26,17 @@ public class MainPage {
     private URL location;
 
     @FXML
-    private TableView<?> ListView;
+    private TableView<ListData> ListView;
+
+
+
+
 
     @FXML
     private TabPane Tab;
 
     @FXML
-    private TableColumn<?, ?> listFinish;
+    private TableColumn<ListData, Long> listFinish;
 
     @FXML
     private BarChart<?, ?> BarChart;
@@ -37,7 +45,8 @@ public class MainPage {
     private Button BWork;
 
     @FXML
-    private TableColumn<?, ?> listWork;
+    private TableColumn<ListData, Long> listWork;
+
 
     @FXML
     private Tab TabChat;
@@ -49,17 +58,27 @@ public class MainPage {
     private Button BFinish;
 
     @FXML
-    private TableColumn<?, ?> listTime;
+    private TableColumn<ListData, Integer> listTime;
+
 
     @FXML
-    void onWork(ActionEvent event) {
-    	 ListViewer.listWork(event);
+    long onWork(ActionEvent event) {
+    	ObservableList<ListData> list = ListView.getItems();								//detaの追加
+		list.add(new ListData(Time.timeSet1(), 0,0));
+		
+      return Time.timeSet1();
     }
 
     @FXML
-    void onFinish(ActionEvent event) {
-    	ListViewer.listFinish(event);
+    long  onFinish(ActionEvent event) {
+    	ObservableList<ListData> list = ListView.getItems();								//detaの追加
+		list.add(new ListData(0, Time.timeSet2(),Time.timer()));
+    	Time.timeSet2();
+    	return Time.timer();
+    	
     }
+
+
 
     @FXML
     void initialize() {
@@ -74,10 +93,12 @@ public class MainPage {
         assert BFinish != null : "fx:id=\"BFinish\" was not injected: check your FXML file 'MainPage.fxml'.";
         assert listTime != null : "fx:id=\"listTime\" was not injected: check your FXML file 'MainPage.fxml'.";
 
+        listWork.setCellValueFactory(new PropertyValueFactory<ListData, Long>("L1"));
+		listFinish.setCellValueFactory(new PropertyValueFactory<ListData, Long>("L2"));
+		listTime.setCellValueFactory(new PropertyValueFactory<ListData, Integer>("L3"));
+
+
+		
     }
+
 }
-
-
-
-
-

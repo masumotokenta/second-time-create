@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
@@ -27,12 +29,16 @@
                         <Button fx:id="BFinish" layoutX="403.0" layoutY="81.0" mnemonicParsing="false" onAction="#onFinish" text="Finish" />
                      </children>
                   </AnchorPane>
-                  <TableView fx:id="ListView" layoutX="14.0" layoutY="538.0" prefHeight="200.0" prefWidth="225.0">
+                  <TableView fx:id="ListView" editable="true" layoutX="14.0" layoutY="538.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="347.0" prefWidth="624.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Work" />
-                      <TableColumn prefWidth="75.0" text="Finish" />
-                        <TableColumn prefWidth="75.0" text="Time" />
+                      
+                      <TableColumn fx:id="listWork" minWidth="0.0" prefWidth="224.0" text="Work" />
+                   
+                        <TableColumn fx:id="listFinish" prefWidth="190.0" text="Finish" />
+                        <TableColumn fx:id="listTime" prefWidth="209.0" text="Time" />
+                       
                     </columns>
+                 
                   </TableView>
                </children>
             </AnchorPane>

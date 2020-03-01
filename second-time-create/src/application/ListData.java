@@ -1,36 +1,37 @@
 package application;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.LongProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleLongProperty;
+
 
 public class ListData {
+	private SimpleLongProperty L1;
+	private SimpleLongProperty L2;
+	private SimpleIntegerProperty L3;
+	
+	
+	;
 
-	protected long L1;
-	protected long L2;
-	protected long L3;
+		public ListData(long xx, long  yy, int zz) {
+			L1 = new SimpleLongProperty(xx);
+	        L2 = new SimpleLongProperty(yy);
+	        L3 = new SimpleIntegerProperty(zz);
+			
 
-		public ListData(long L1, long L2 , long L3) {
-			this.L1 = Time.nowStart1;
-			this.L2 = Time.nowStop2;
-			this.L3 = Time.timeDiff;
+
 		}
-		public void setValue1( long l) {
-			L1 = l;
-		}
-
-		public long getValue1() {
+		public  LongProperty L1Property() {
+			
 			return L1;
 		}
 
-		public void setValue2(long l) {
-			L2 = l;
-		}
 
-		public long getValue2() {
+		public LongProperty L2Property() {
 			return L2;
 		}
-		public void setValue3(long l) {
-			L3 = l;
-		}
-
-		public long getValue3() {
+		
+		public  IntegerProperty L3Property() {
 			return L3;
 		}
 	}

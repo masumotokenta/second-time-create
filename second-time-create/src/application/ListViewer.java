@@ -1,14 +1,8 @@
 package application;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.scene.chart.BarChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 
 
 
@@ -17,8 +11,9 @@ public class ListViewer {
 	 private TableView<ListData> ListView;
 
 	 @FXML
-	 public static void listWork(ActionEvent e) {
-		 TabelViewController.initialize(java.net.URL location, java.util.ResourceBundle resources);
+	 public  void listWork(ActionEvent e) {
+		 ObservableList<ListData> list = ListView.getItems();								//detaの追加
+			list.add(new ListData(Time.nowStart1, Time.nowStop2,Time.timeDiff));
 
 
 	 }
